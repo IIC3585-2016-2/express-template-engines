@@ -1,2 +1,7 @@
 
 /jade_ejemplo/node_modules/
+/.idea/
+.idea/express-template-engines.iml
+.idea/modules.xml
+.idea/workspace.xml
+
