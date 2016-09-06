@@ -4,38 +4,79 @@ Express Template Engines
 
 En express[1], un motor de plantillas le permite utilizar archivos de plantillas estáticas en su aplicación. En tiempo de ejecución, el motor de plantillas reemplaza variables en un archivo de plantilla con valores reales, y transforma la plantilla en un archivo HTML se envía al cliente
 
-## Preparar entorno ##
-
-```
-npm install express-generator -g
-```
-
-
-
 ## Jade ##
 
 Jade es un motor de plantillas de alto rendimiento fuertemente influenciado por [Haml](http://haml.info/) e implementado con el lenguaje Java para el nodejs.
 
-### Vantajas ###
-No closing tags
-White space significant indentation
-Extensive layout inheritance
-Macros support
-Plain old school includes
-Built in support for Markdown, CoffeeScript and others
-Available implementations in php, scala, ruby, python and java.
-
-C
 
 Inicializar el proyecto
 ```
-express jade_ejemplo
+express jade_ejemplo0
+```
+
+Adcionar dependencia de express
+```
+npm install express --save
+```
+
+
+Adicionar dependencia de jade
+```
+npm install jade --save
+```
+
+Adicionar dependencia para logger
+```
+npm install morgan --save
 ```
 
 
 
+Definir el el template engine
+```
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+```
 
-Install Jade
+Definir rutas
+```
+var routes = require('./routes/index');
+app.use('/', routes);
+```
+
+
+Plantilla con Jade en views
+```
+html
+  head
+    title!= title
+  body
+    h1!= message
+```
+
+Definicion de rutas en routs
+```
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function (req, res) {
+  res.render('index', { title: 'Hola', message: 'Fue pasado por parametro desde el router!'});
+});
+
+
+module.exports = router;
+```
+
+Iniciar Servidor
+```
+npm start
+```
+
+Probar plantilla
+```
+http://localhost:3000/
+```
+
 
 ## Pug ##
 
@@ -58,14 +99,27 @@ Mustache es un _logic-less template syntax_. Puede ser utilizado para HTML, arch
 
 ## Dust ##
 
+Observacion
+```
+Los motores de plantilla compatibles con Express como, por ejemplo, Jade exportan una función denominada __express(filePath, options, callback), 
+que es invocada por la función res.render() para representar el código de plantilla.
+
+Algunos motores de plantilla no siguen esta convención. La biblioteca Consolidate.js sigue esta convención correlacionando todos los motores 
+de plantilla de Node.js  más conocidos, por lo que funciona de forma ininterrumpida en Express.
+```
+
+
+
 Comparacion
 
 
 ## Referencias ##
-* http://expressjs.com/es/guide/using-template-engines.html 
-* https://www.npmjs.com/package/jade
-* https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
-* https://github.com/pugjs/pug
+
+
+1. http://expressjs.com/es/guide/using-template-engines.html 
+2. https://www.npmjs.com/package/jade
+3. https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
+4. https://github.com/pugjs/pug
 
 
 

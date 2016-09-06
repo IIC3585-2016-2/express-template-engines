@@ -5,3 +5,5 @@
 .idea/modules.xml
 .idea/workspace.xml
 
+/jade_ejemplo0/node_modules/
+/npm-debug.log
