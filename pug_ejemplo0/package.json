@@ -1,16 +1,21 @@
 {
-  "name": "jade_ejemplo0",
+  "name": "pug_ejemplo0",
   "version": "1.0.0",
-  "description": "Ejemplo basico de uso de Jade con Express",
+  "description": "Ejemplo basico del uso de Pug con express",
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
+  "keywords": [
+    "pug",
+    "iic3585",
+    "es6"
+  ],
   "author": "Luiz Quelves, Ronald Perez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "jade": "^1.11.0",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6"
   }
 }

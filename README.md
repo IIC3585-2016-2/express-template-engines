@@ -8,10 +8,16 @@ En express[1], un motor de plantillas le permite utilizar archivos de plantillas
 
 Jade es un motor de plantillas de alto rendimiento fuertemente influenciado por [Haml](http://haml.info/) e implementado con el lenguaje Java para el nodejs.
 
+Crear proyecto
+```
+mkdir jade_ejemplo0
+cd jade_ejemplo0
+```
+
 
 Inicializar el proyecto
 ```
-express jade_ejemplo0
+npm init
 ```
 
 Adcionar dependencia de express
@@ -60,7 +66,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  res.render('index', { title: 'Hola', message: 'Fue pasado por parametro desde el router!'});
+  res.render('index', { title: 'Jade Ejemplo', message: 'Jade Ejemplo - Fue pasado por parametro desde el router!'});
 });
 
 
@@ -83,12 +89,79 @@ http://localhost:3000/
 Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con el JavaScript para Node.js y navegadores. Para informes de errores, peticiones y preguntas, abrir un problema. Para la discusión unirse a la sala de chat.
 Este proyecto era conocida anteriormente como "Jade". Sin embargo, se ha revelado que "Jade" es una marca registrada, y como resultado, se necesita un cambio de nombre. Tras un breve debate entre los mantenedores, "Pug" ha sido elegido como el nuevo nombre para este proyecto. La próxima versión principal llevará a "pug", como el nombre del paquete.
 
-Instalacion
+Crear proyecto
 ```
-npm install pug
+mkdir pug_ejemplo
+cd pug_ejemplo
 ```
 
 
+Inicializar el proyecto
+```
+npm init
+```
+
+Adcionar dependencia de express
+```
+npm install express --save
+```
+
+
+Adicionar dependencia de jade
+```
+npm install pug --save
+```
+
+Adicionar dependencia para logger
+```
+npm install morgan --save
+```
+
+
+Definir el el template engine
+```
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+```
+
+Definir rutas
+```
+var routes = require('./routes/index');
+app.use('/', routes);
+```
+
+
+Plantilla con Jade en views
+```
+html
+  head
+    title!= title
+  body
+    h1!= message
+```
+
+Definicion de rutas en routs
+```
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function (req, res) {
+  res.render('index', { title: 'Pug Ejemplo', message: 'Pug Ejemplo - Fue pasado por parametro desde el router!'});
+});
+
+
+module.exports = router;
+```
+
+Iniciar Servidor
+```
+npm start
+```
+
+Probar plantilla
+```
+http://localhost:3000/
+```
 
 
 See Template Engines (Express wiki) for a list of template engines you can use with Express. See also Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More.

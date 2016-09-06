@@ -1,9 +1,12 @@
-
-/jade_ejemplo/node_modules/
 /.idea/
 .idea/express-template-engines.iml
 .idea/modules.xml
 .idea/workspace.xml
 
-/jade_ejemplo0/node_modules/
 /npm-debug.log
+
+/jade_ejemplo/node_modules/
+/jade_ejemplo0/node_modules/
+
+/pug_ejemplo0/node_modules/
+/pug_ejemplo/node_modules/
