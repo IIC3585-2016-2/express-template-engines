@@ -199,6 +199,33 @@ block content
 ```
 Las condiciones son atendidas segun el valor del when, tambien se puede o en verdad se debe utilizar el break para cuando no se desea renderizar nada ´para un dado valor
 
+### Code ###
+
+Pug hace que sea posible escribir código JavaScript en línea en sus plantillas. Hay tres tipos de código
+
+#### Unbuffered Code ####
+Empeza con **-** y no anade ninguna salida
+```javascript
+- list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+each item in list
+  li= item
+```
+
+#### Buffered Code ####
+Empeza con **=** como salida va el resultado de la evaluación de la expresión de JavaScript en la plantilla. Para mayor seguridad, es la primera de escape HTML
+```javascript
+p= 'This code is' + ' <escaped>!'
+```
+
+
+#### Unescaped Buffered Code ####
+comienza con! = y envía el resultado de la evaluación de la expresión de JavaScript en la plantilla. Esto no hace ningún escape, por lo que no es seguro para la entrada del usuario
+```javascript
+p
+  != 'This code is <strong>not</strong> escaped!'
+```
+
+
 ##Build Pug Project ##
 
 Crear proyecto

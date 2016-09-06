@@ -44,6 +44,10 @@ router.get('/case', function (req, res) {
   res.render('case', { title: 'Pug Case', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
+router.get('/code', function (req, res) {
+  res.render('code', { title: 'Pug Code', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
+
 //controle
 
 
