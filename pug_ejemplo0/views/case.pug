@@ -1,0 +1,37 @@
+extends layout.pug
+
+block content
+    .container
+        .jumbotron
+            h1=title
+                p=message+' y '+title
+
+
+            h2 Case
+            - var friends = 10
+            case friends
+                when 0
+                    p you have no friends
+                when 1
+                    p you have a friend
+                default
+                    p you have #{friends} friends
+
+            h2 Case Fall Through
+            - friends = 0
+            case friends
+                when 0
+                when 1
+                    p you have very few friends
+                default
+                    p you have #{friends} friends
+
+            h2 Case with break
+            - var friends = 0
+            case friends
+                when 0
+                    - break
+                when 1
+                    p you have very few friends
+                default
+                    p you have #{friends} friends

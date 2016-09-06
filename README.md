@@ -155,6 +155,52 @@ block content
 ```
 
 
+
+##### Case ####
+La declaración de _Case_ es similar al  switch de JavaScript.
+```javascript
+extends layout.pug
+
+block content
+    .container
+        .jumbotron
+            h1=title
+                p=message+' y '+title
+
+
+            h2 Case
+            - var friends = 10
+            case friends
+                when 0
+                    p you have no friends
+                when 1
+                    p you have a friend
+                default
+                    p you have #{friends} friends
+
+            h2 Case Fall Through
+            - friends = 0
+            case friends
+                when 0
+                when 1
+                    p you have very few friends
+                default
+                    p you have #{friends} friends
+
+            h2 Case with break
+            - var friends = 0
+            case friends
+                when 0
+                    - break
+                when 1
+                    p you have very few friends
+                default
+                    p you have #{friends} friends
+```
+Las condiciones son atendidas segun el valor del when, tambien se puede o en verdad se debe utilizar el break para cuando no se desea renderizar nada ´para un dado valor
+
+##Build Pug Project ##
+
 Crear proyecto
 ```javascript
 mkdir pug_ejemplo

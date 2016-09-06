@@ -40,5 +40,12 @@ router.get('/attributes', function (req, res) {
   res.render('attributes', { title: 'Pug Atributes', message: 'Pug Atributes!'});
 });
 
+router.get('/case', function (req, res) {
+  res.render('case', { title: 'Pug Case', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
+
+//controle
+
+
 module.exports = router;
 
