@@ -39,6 +39,16 @@ Install Jade
 
 ## Pug ##
 
+Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con el JavaScript para Node.js y navegadores. Para informes de errores, peticiones y preguntas, abrir un problema. Para la discusión unirse a la sala de chat.
+Este proyecto era conocida anteriormente como "Jade". Sin embargo, se ha revelado que "Jade" es una marca registrada, y como resultado, se necesita un cambio de nombre. Tras un breve debate entre los mantenedores, "Pug" ha sido elegido como el nuevo nombre para este proyecto. La próxima versión principal llevará a "pug", como el nombre del paquete.
+
+Instalacion
+```
+npm install pug
+```
+
+
+
 
 See Template Engines (Express wiki) for a list of template engines you can use with Express. See also Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More.
 
@@ -55,7 +65,7 @@ Comparacion
 [1] http://expressjs.com/es/guide/using-template-engines.html 
 [2] https://www.npmjs.com/package/jade
 [2] https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
-
+[4] https://github.com/pugjs/pug
 
 
 

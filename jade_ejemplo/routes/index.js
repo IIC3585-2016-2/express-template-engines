@@ -14,4 +14,12 @@ router.get('/detail', function(req, res, next) {
   res.render('detail', { title: 'Detalles' });
 });
 
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contacto' });
+});
+
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Nosotros' });
+});
+
 module.exports = router;

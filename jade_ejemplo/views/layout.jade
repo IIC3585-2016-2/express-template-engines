@@ -7,22 +7,13 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
   body
-    .navbar.navbar-default.navbar-fixed-top
-      .navbar-header
-        .container
-          a.brand(href="/") Jade Ejemplo
-
-      .navbar-default
-          ul.nav
-            li.active
-            a(href="/login") login
-            li
-            a(href="/detail") Detail
-            li
-            a(href="about") About
-
-
-
-
+    include navbar
 
     block content
+
+    include footer
+
+
+
+
+
