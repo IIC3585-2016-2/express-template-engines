@@ -8,6 +8,8 @@ En express[1], un motor de plantillas le permite utilizar archivos de plantillas
 
 Jade es un motor de plantillas de alto rendimiento fuertemente influenciado por [Haml](http://haml.info/) e implementado con el lenguaje Java para el nodejs.
 
+
+
 Crear proyecto
 ```
 mkdir jade_ejemplo0
@@ -83,6 +85,76 @@ http://localhost:3000/
 
 Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con el JavaScript para Node.js y navegadores. Para informes de errores, peticiones y preguntas, abrir un problema. Para la discusión unirse a la sala de chat.
 Este proyecto era conocida anteriormente como "Jade". Sin embargo, se ha revelado que "Jade" es una marca registrada, y como resultado, se necesita un cambio de nombre. Tras un breve debate entre los mantenedores, "Pug" ha sido elegido como el nuevo nombre para este proyecto. La próxima versión principal llevará a "pug", como el nombre del paquete.
+
+### Language References ###
+
+Pug posue una seria de comandos, para soportar la creacion de plantillas, com opciones para extender otras plantillas asi como incluir otras plantillas para componer un layto,
+asi como funciones para el control de flujo y estado.
+
+#### Attributes ####
+
+Los atributos son los mismos de html pero con la sintaxis de JS
+
+```
+a(href='google.com') Google
+= '\n'
+a(class='button' href='google.com') Google
+= '\n'
+a(class='button', href='google.com') Google
+```
+
+
+#### Template Inheritance ####
+
+##### Extends y Block #####
+
+The extends keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
+
+#####  #####
+
+Un bloque es simplemente un "bloque" de barro que puede ser sustituido dentro de una plantilla hija. Este proceso es recursivo
+
+```
+html
+  head
+    title My Site - #{title}
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block scripts
+      script(src='/bootstrap/js/bootstrap.min.js')
+      script(src='/javascripts/jquery-3.1.0.min.js')
+  body
+    block content
+    block foot
+      .container.navbar-fixed-bottom.panel-footer
+        footer.footer
+          p © Taller de Aplicaciones en Plataformas Moviles | IIC3380 - Sección 1 | 2' 2016
+```
+
+
+Para extender la plantilla, hay que crear una nueva plantilla como Pug y usar Extends
+```
+extends layout.pug
+
+block scripts
+  script(src='/jquery.js')
+  script(src='/pets.js')
+
+block content
+  .container
+    .jumbotron
+      h1 Pug usando variables
+        p
+          | Aplicacion de Ejemplo de NodeJS con Express y Jade.
+
+    h2 Lista de Pets
+    - var pets = ['cat', 'dog']
+    ul.list-group
+      each petName in pets
+        include pet.pug
+```
+
 
 Crear proyecto
 ```

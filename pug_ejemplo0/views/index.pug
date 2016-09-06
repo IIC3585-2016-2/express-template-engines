@@ -1,6 +1,8 @@
-html
-  head
-    title!= title
-  body
-    h1!= message
+extends layout
 
+block content
+    .container
+        .jumbotron
+            h1 Pug usando extends y block
+            p
+                | Aplicacion de Ejemplo de NodeJS con Express y Jade.
