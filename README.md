@@ -254,6 +254,8 @@ Comparacion
 2. https://www.npmjs.com/package/jade
 3. https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
 4. https://github.com/pugjs/pug
+5. https://pugjs.org/api/getting-started.html
+
 
 
 
