@@ -14,7 +14,6 @@ mkdir jade_ejemplo0
 cd jade_ejemplo0
 ```
 
-
 Inicializar el proyecto
 ```
 npm init
@@ -25,7 +24,6 @@ Adcionar dependencia de express
 npm install express --save
 ```
 
-
 Adicionar dependencia de jade
 ```
 npm install jade --save
@@ -35,8 +33,6 @@ Adicionar dependencia para logger
 ```
 npm install morgan --save
 ```
-
-
 
 Definir el el template engine
 ```
@@ -49,7 +45,6 @@ Definir rutas
 var routes = require('./routes/index');
 app.use('/', routes);
 ```
-
 
 Plantilla con Jade en views
 ```
@@ -95,7 +90,6 @@ mkdir pug_ejemplo
 cd pug_ejemplo
 ```
 
-
 Inicializar el proyecto
 ```
 npm init
@@ -106,7 +100,6 @@ Adcionar dependencia de express
 npm install express --save
 ```
 
-
 Adicionar dependencia de jade
 ```
 npm install pug --save
@@ -116,7 +109,6 @@ Adicionar dependencia para logger
 ```
 npm install morgan --save
 ```
-
 
 Definir el el template engine
 ```
@@ -129,7 +121,6 @@ Definir rutas
 var routes = require('./routes/index');
 app.use('/', routes);
 ```
-
 
 Plantilla con Jade en views
 ```
@@ -164,7 +155,6 @@ http://localhost:3000/
 ```
 
 
-See Template Engines (Express wiki) for a list of template engines you can use with Express. See also Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More.
 
 ## Mustache ##
 
