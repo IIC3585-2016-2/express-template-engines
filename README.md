@@ -17,39 +17,39 @@ cd jade_ejemplo0
 ```
 
 Inicializar el proyecto
-```
+```javascript
 npm init
 ```
 
 Adcionar dependencia de express
-```
+```javascript
 npm install express --save
 ```
 
 Adicionar dependencia de jade
-```
+```javascript
 npm install jade --save
 ```
 
 Adicionar dependencia para logger
-```
+```javascript
 npm install morgan --save
 ```
 
 Definir el el template engine
-```
+```javascript
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 ```
 
 Definir rutas
-```
+```javascript
 var routes = require('./routes/index');
 app.use('/', routes);
 ```
 
 Plantilla con Jade en views
-```
+```javascript
 html
   head
     title!= title
@@ -58,7 +58,7 @@ html
 ```
 
 Definicion de rutas en routs
-```
+```javascript
 var express = require('express');
 var router = express.Router();
 
@@ -71,12 +71,12 @@ module.exports = router;
 ```
 
 Iniciar Servidor
-```
+```javascript
 npm start
 ```
 
 Probar plantilla
-```
+```javascript
 http://localhost:3000/
 ```
 
@@ -95,7 +95,7 @@ asi como funciones para el control de flujo y estado.
 
 Los atributos son los mismos de html pero con la sintaxis de JS
 
-```
+```javascript
 a(href='google.com') Google
 = '\n'
 a(class='button' href='google.com') Google
@@ -113,8 +113,7 @@ The extends keyword allows a template to extend a layout or parent template. It 
 #####  #####
 
 Un bloque es simplemente un "bloque" de barro que puede ser sustituido dentro de una plantilla hija. Este proceso es recursivo
-
-```
+```javascript
 html
   head
     title My Site - #{title}
@@ -134,7 +133,7 @@ html
 
 
 Para extender la plantilla, hay que crear una nueva plantilla como Pug y usar Extends
-```
+```javascript
 extends layout.pug
 
 block scripts
@@ -157,45 +156,45 @@ block content
 
 
 Crear proyecto
-```
+```javascript
 mkdir pug_ejemplo
 cd pug_ejemplo
 ```
 
 Inicializar el proyecto
-```
+```javascript
 npm init
 ```
 
 Adcionar dependencia de express
-```
+```javascript
 npm install express --save
 ```
 
 Adicionar dependencia de jade
-```
+```javascript
 npm install pug --save
 ```
 
 Adicionar dependencia para logger
-```
+```javascript
 npm install morgan --save
 ```
 
 Definir el el template engine
-```
+```javascript
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 ```
 
 Definir rutas
-```
+```javascript
 var routes = require('./routes/index');
 app.use('/', routes);
 ```
 
 Plantilla con Jade en views
-```
+```javascript
 html
   head
     title!= title
@@ -204,7 +203,7 @@ html
 ```
 
 Definicion de rutas en routs
-```
+```javascript
 var express = require('express');
 var router = express.Router();
 
@@ -217,12 +216,12 @@ module.exports = router;
 ```
 
 Iniciar Servidor
-```
+```javascript
 npm start
 ```
 
 Probar plantilla
-```
+```javascript
 http://localhost:3000/
 ```
 
