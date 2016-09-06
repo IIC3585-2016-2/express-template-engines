@@ -62,10 +62,10 @@ Comparacion
 
 
 ## Referencias ##
-[1] http://expressjs.com/es/guide/using-template-engines.html 
-[2] https://www.npmjs.com/package/jade
-[2] https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
-[4] https://github.com/pugjs/pug
+* http://expressjs.com/es/guide/using-template-engines.html 
+* https://www.npmjs.com/package/jade
+* https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
+* https://github.com/pugjs/pug
 
 
 
