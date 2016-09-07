@@ -47,7 +47,7 @@ html
     block foot
       .container.navbar-fixed-bottom.panel-footer
         footer.footer
-          p © Taller de Aplicaciones en Plataformas Moviles | IIC3380 - Sección 1 | 2\' 2016
+          p © Taller de Aplicaciones en Plataformas Moviles | IIC3380 - Sección 1 | 2\*'\* 2016
 ```
 
 
@@ -171,7 +171,7 @@ Se puedo utilizar **unless** para negar una condición
 
 ```javascript
 unless user.isAnonymous
-  p You\'re logged in as #{user.name}
+  p You\*'\*re logged in as #{user.name}
 ```
 
 ## Filters ##
@@ -199,7 +199,7 @@ Pug prove los operadores para una variedad de sus necesidades diferentes de inte
 ### String Interpolation, Escaped ###
 Tenga en cuenta la ubicación de los locales **title, author, and theGreat** de la plantilla, title, author, and theGreat en la siguiente plantilla
 ```js
-- var title = "On Dogs: Man\'s Best Friend";
+- var title = "On Dogs: Man\*'\*s Best Friend";
 - var author = "enlore";
 - var theGreat = "<span>escape!</span>";
 
@@ -213,7 +213,7 @@ p This will be safe: #{theGreat}
 
 ### String Interpolation, Unescaped ###
 ```js
-- var riskyBusiness = "<em>Some of the girls are wearing my mother\'s clothing.</em>";
+- var riskyBusiness = "<em>Some of the girls are wearing my mother\*'\*s clothing.</em>";
 .quote
   p Joel: !{riskyBusiness}
 ```
@@ -233,7 +233,7 @@ p.
 La sintaxis de la etiqueta de interpolación es especialmente útil para las etiquetas en línea, donde los espacios en blanco antes y después de la etiqueta es significativa
 ```js
 p
-  | If I don\'t write the paragraph with tag interpolation, tags like
+  | If I don\*'\*t write the paragraph with tag interpolation, tags like
   strong strong
   | and
   em em
