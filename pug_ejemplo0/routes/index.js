@@ -69,6 +69,10 @@ router.get('/conditionals', function (req, res) {
 router.get('/filters', function (req, res) {
   res.render('filters', { title: 'Pug Filters', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
+
+router.get('/interpolation', function (req, res) {
+  res.render('interpolation', { title: 'Pug Interpolation', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
 //controle
 
 

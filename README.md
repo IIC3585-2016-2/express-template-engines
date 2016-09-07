@@ -211,10 +211,35 @@ p This will be safe: #{theGreat}
 
 
 ### String Interpolation, Unescaped ###
+```js
+- var riskyBusiness = "<em>Some of the girls are wearing my mother's clothing.</em>";
+.quote
+  p Joel: !{riskyBusiness}
+```
+
 
 ### Tag Interpolation  ###
+Se puede utilizar tag interpolation
+```js
+p.
+  This is a very long and boring paragraph that spans multiple lines.
+  Suddenly there is a #[strong strongly worded phrase] that cannot be
+  #[em ignored].
+```
+
 
 ### Whitespace Control ###
+La sintaxis de la etiqueta de interpolación es especialmente útil para las etiquetas en línea, donde los espacios en blanco antes y después de la etiqueta es significativa
+```js
+p
+  | If I don't write the paragraph with tag interpolation, tags like
+  strong strong
+  | and
+  em em
+  | might produce unexpected results.
+p.
+  If I do, whitespace is #[strong respected] and #[em everybody] is happy.
+```
 
 
 
