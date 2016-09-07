@@ -143,6 +143,7 @@ p
 ```
 
 ## Conditionals ## 
+Pug incorpora sintaxis condicional de primera clase que permite omitir la carga del contenido.
 
 ### If ... Else ###
 Se puede utilizar el condicional **if ... else** para controlar la renderización 
