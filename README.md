@@ -2,17 +2,15 @@ Express Template Engines
 ===================
 
 
-En express[1], un motor de plantillas le permite utilizar archivos de plantillas estáticas en su aplicación. En tiempo de ejecución, el motor de plantillas reemplaza variables en un archivo de plantilla con valores reales, y transforma la plantilla en un archivo HTML se envía al cliente
+En express[1], un motor de plantillas le permite utilizar archivos de plantillas estáticas en su aplicación. En tiempo de ejecución, el motor de plantillas reemplaza variables en un archivo de plantilla con valores reales, y transforma la plantilla en un archivo HTML que se envía al cliente.
 
 # Pug/Jade #
 
-Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con el JavaScript para Node.js y navegadores. Para informes de errores, peticiones y preguntas, abrir un problema. Para la discusión unirse a la sala de chat.
-Este proyecto era conocida anteriormente como "Jade". Sin embargo, se ha revelado que "Jade" es una marca registrada, y como resultado, se necesita un cambio de nombre. Tras un breve debate entre los mantenedores, "Pug" ha sido elegido como el nuevo nombre para este proyecto. La próxima versión principal llevará a "pug", como el nombre del paquete.
+Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por Haml e implementado con el JavaScript para Node.js y navegadores. Este proyecto era conocido anteriormente como "Jade", pero "Jade" es una marca registrada y el proyecto cambió de nombre. La próxima versión principal llevará a "pug", como el nombre del paquete.
 
 ## Language References ##
 
-Pug posue una seria de comandos, para soportar la creacion de plantillas, com opciones para extender otras plantillas asi como incluir otras plantillas para componer un layto,
-asi como funciones para el control de flujo y estado.
+Pug posee una serie de comandos para soportar la creacion de plantillas, con opciones para extender otras plantillas asi como incluir otras plantillas para componer un layto, asi como funciones para el control de flujo y estado.
 
 ### Attributes ###
 
