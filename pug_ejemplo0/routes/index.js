@@ -5,7 +5,21 @@ router.get('/', function (req, res) {
   res.render('index', { title: 'Pug Ejemplo', message: 'Pug Ejemplo - Fue pasado por parametro desde el router!'});
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'login' });
+});
 
+router.get('/detail', function(req, res, next) {
+  res.render('detail', { title: 'Detalles' });
+});
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contacto' });
+});
+
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Nosotros' });
+});
 
 //
 router.get('/layout', function (req, res) {
