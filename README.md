@@ -451,7 +451,7 @@ Replace
 Para unicar una comparación simple, se tomó en cuenta la actividad que tiene cada motor en su repositorio de desarrollo, en este resultado se puede ver que Jade es el proyecto más activo, según datos del 2014.
 ```
 NAME	        STARS	  FORKS	  COMMITS	  CONTRIBUTORS	GITHUB SCORE
-Jade/Pug	        12,088	  1,624	   2,442	           176	         118
+Jade/Pug	    12,088	  1,624	   2,442	           176	         118
 Mustache.js	    9,752	  1,919	     697	            88	          88
 Dust.js	        1,571	    293	     697	            28	          28
 Nunjucks	    1,565	    115	     525	            40	          26
