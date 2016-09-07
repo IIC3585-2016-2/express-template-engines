@@ -448,14 +448,14 @@ Replace
 
 
 ## Comparación ##
-Para unicar una comparación simple, se tomó en cuenta la actividad que tiene cada motor en su repositorio de desarrollo, en este resultado se puede ver que Jade es el proyecto más activo, según datos del 2014.
+Para unicar una comparación simple, se tomó en cuenta la actividad que tiene cada motor en su repositorio de desarrollo, en este resultado se puede ver que Jade es el proyecto más activo, según datos del 2016.
 ```
-NAME	        STARS	  FORKS	  COMMITS	  CONTRIBUTORS	GITHUB SCORE
-Jade/Pug	    12,088	  1,624	   2,442	           176	         118
-Mustache.js	    9,752	  1,919	     697	            88	          88
-Dust.js	        1,571	    293	     697	            28	          28
-Nunjucks	    1,565	    115	     525	            40	          26
-EJS	            1,796	    289	     221	            24            25
+NAME	        STARS	  FORKS	  COMMITS	  CONTRIBUTORS	
+Jade/Pug	    12,088	  1,624	   2,442	           176	         
+Mustache.js	    9,752	  1,919	     697	            88	          
+Dust.js	        2,358	    399	     882	            35	          
+Nunjucks	    3,354	    296	     1,095	            96	          
+EJS	            3,005	    419	     227	            23            
 ```
 
 ## Referencias ##
