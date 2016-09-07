@@ -2,7 +2,7 @@ Express Template Engines
 ===================
 
 
-En express[1], un motor de plantillas le permite utilizar archivos de plantillas estáticas en su aplicación. En tiempo de ejecución, el motor de plantillas reemplaza variables en un archivo de plantilla con valores reales, y transforma la plantilla en un archivo HTML que se envía al cliente.
+En express, un motor de plantillas le permite utilizar archivos de plantillas estáticas en su aplicación. En tiempo de ejecución, el motor de plantillas reemplaza variables en un archivo de plantilla con valores reales, y transforma la plantilla en un archivo HTML que se envía al cliente.
 
 # Pug/Jade #
 
@@ -322,7 +322,44 @@ var result = template(locals);
 ```
 
 
-## Dust ##
+## Handlebars ##
+
+Handlebars proporciona la potencia necesaria que le permitirán crear plantillas semánticas con eficacia sin la frustración
+
+```html
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+
+```
+
+## EJS ##
+Embedded JavaScript Templates (EJS) una solución ligera hacia la creación de HTML, 
+
+Instalar con NPM
+```
+npm install ejs
+```
+
+Usando
+```js
+var ejs = require('ejs'),
+    people = ['geddy', 'neil', 'alex'],
+    html = ejs.render('<%= people.join(", "); %>', {people: people});
+```
+
+Replace 
+..```
+<ul>
+  <% users.forEach(function(user){ %>
+    <%- include('user/show', {user: user}); %>
+  <% }); %>
+</ul>
+```
+
 
 Observacion
 ```
