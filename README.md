@@ -324,7 +324,7 @@ Mustache es un _logic-less template syntax_. Puede ser utilizado para HTML, arch
 
 Mustache.js es una implementación del sistema de plantillas [Mustache] (Mustache) en JavaScript.
 
-Lo llamamos "logic-less" porque no existen declaraciones IF. En su lugar sólo hay etiquetas. Algunas etiquetas se reemplazan con un valor, algunos nada, y otros una serie de valores
+Lo llamamos "logic-less" porque no existen declaraciones IF ni otras estructuras lógicas. En su lugar sólo hay etiquetas. Algunas etiquetas se reemplazan con un valor, algunos nada, y otros una serie de valores.
 
 ```js
 <div class="post">
