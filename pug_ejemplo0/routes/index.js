@@ -73,6 +73,10 @@ router.get('/filters', function (req, res) {
 router.get('/interpolation', function (req, res) {
   res.render('interpolation', { title: 'Pug Interpolation', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
+
+router.get('/mixins', function (req, res) {
+  res.render('mixins', { title: 'Pug Mixins', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
 //controle
 
 

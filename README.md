@@ -242,7 +242,67 @@ p.
   If I do, whitespace is #[strong respected] and #[em everybody] is happy.
 ```
 
+## Mixins ##
+Mixins permite crear bloques reutilizables
+```js
+//- Declaration
+mixin list
+  ul
+    li foo
+    li bar
+    li baz
+//- Use
++list
++list
 
+mixin pet(name)
+  li.pet= name
+ul
+  +pet('cat')
+  +pet('dog')
+  +pet('pig')
+
+```
+
+### Mixin Blocks ###
+Mixins también puede tener un bloque de barro para que actúe como el contenido
+```js
+mixin article(title)
+  .article
+    .article-wrapper
+      h1= title
+      if block
+        block
+      else
+        p No content provided
+
++article('Hello world')
+
++article('Hello world')
+  p This is my
+  p Amazing article
+```
+
+### Mixin Attributes ###
+Mixins también obtener un argumento implícito atributos tomados de los atributos pasados ​​al mixin
+```js
+mixin link(href, name)
+  //- attributes == {class: "btn"}
+  a(class!=attributes.class href=href)= name
+
++link('/foo', 'foo')(class="btn")
+```
+
+### Rest Arguments ###
+Puede escribir mixins que tienen un número indeterminado de argumentos usando la sintaxis "rest arguments", p.ej.
+```js
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+
++list('my-list', 1, 2, 3, 4)
+```
 
 
 ## Build Pug Project ##
