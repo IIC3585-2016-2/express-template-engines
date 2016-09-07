@@ -191,6 +191,32 @@ En la plantilla PUG usar
 
 ```
 
+##  Interpolation ##
+Pug prove os operadores para una variedad de sus necesidades diferentes de interpolación
+
+### String Interpolation, Escaped ###
+Tenga en cuenta la ubicación de los locales **title, author, and theGreat** de la plantilla, title, author, and theGreat en la siguiente plantilla
+```js
+- var title = "On Dogs: Man's Best Friend";
+- var author = "enlore";
+- var theGreat = "<span>escape!</span>";
+
+h1= title
+p Written with love by #{author}
+p This will be safe: #{theGreat}
+```
+
+**title** sogie el padron basico para evaluar una plantilla local, pero el código entre **#{ and }** es evaluada, aplicado el escape y el resultado es bufferizado en la plantilla
+
+
+### String Interpolation, Unescaped ###
+
+### Tag Interpolation  ###
+
+### Whitespace Control ###
+
+
+
 
 ## Build Pug Project ##
 
@@ -269,6 +295,31 @@ http://localhost:3000/
 ## Mustache ##
 
 Mustache es un _logic-less template syntax_. Puede ser utilizado para HTML, archivos de configuración, código fuente y etc. Funciona mediante tags que son expandidas utilizando los valores proporcionados en un hash o un objeto
+
+Mustache.js es una implementación del sistema de plantillas [Mustache] (Mustache) en JavaScript.
+
+Lo llamamos "logic-less" porque no existen declaraciones IF. En su lugar sólo hay etiquetas. Algunas etiquetas se reemplazan con un valor, algunos nada, y otros una serie de valores
+
+```js
+<div class="post">
+  <h1>By {{fullName author}}</h1>
+  <div class="body">{{body}}</div>
+ 
+  <h1>Comments</h1>
+ 
+  {{#each comments}}
+    <h2>By {{fullName author}}</h2>
+    <div class="body">{{body}}</div>
+  {{/each}}
+</div>
+1
+2
+3
+var mustache = require('mustache');
+var template = mustache.compile('string of mustache');
+var result = template(locals);
+```
+
 
 ## Dust ##
 
