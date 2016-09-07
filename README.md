@@ -10,7 +10,7 @@ Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por H
 
 ## Language References ##
 
-Pug posee una serie de comandos para soportar la creacion de plantillas, con opciones para extender otras plantillas asi como incluir otras plantillas para componer un layto, asi como funciones para el control de flujo y estado.
+Pug posee una serie de comandos para soportar la creacion de plantillas, con opciones para extender otras plantillas asi como incluir otras plantillas para componer un layout, asi como funciones para el control de flujo y estado.
 
 ### Attributes ###
 
@@ -24,11 +24,14 @@ a(class='button' href='google.com') Google
 a(class='button', href='google.com') Google
 ```
 
+## Template Inheritance ##
+
+
 ### Extends y Block ###
 
 The extends keyword allows a template to extend a layout or parent template. It can then override certain pre-defined blocks of content.
 
-Un bloque es simplemente un "bloque" de barro que puede ser sustituido dentro de una plantilla hija. Este proceso es recursivo
+Un **block** es simplemente un "bloque" que puede ser sustituido dentro de una plantilla hija. Este proceso es recursivo
 ```javascript
 html
   head
