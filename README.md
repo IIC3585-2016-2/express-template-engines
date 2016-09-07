@@ -172,7 +172,24 @@ unless user.isAnonymous
   p You're logged in as #{user.name}
 ```
 
+## Filters ##
 
+Los filtros permiten usar otros idiomas dentro de una plantilla Pug, Todos los módulos JSTransformer se pueden usar como filtros de Pug. filtros populares incluyen :babel, :uglify-js, :scss, y :markdown-it
+
+Para usar markdown
+```shellscript
+npm install --save jstransformer-markdown-it
+```
+
+En la plantilla PUG usar
+```js
+:markdown-it(linkify langPrefix='highlight-')
+  # Markdown
+
+  Markdown document with http://links.com and
+
+
+```
 
 
 ## Build Pug Project ##
