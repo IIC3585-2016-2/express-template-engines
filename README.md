@@ -361,7 +361,7 @@ Replace
 ```
 
 
-Observacion
+Observación
 ```
 Los motores de plantilla compatibles con Express como, por ejemplo, Jade exportan una función denominada __express(filePath, options, callback), 
 que es invocada por la función res.render() para representar el código de plantilla.
@@ -372,8 +372,15 @@ de plantilla de Node.js  más conocidos, por lo que funciona de forma ininterrum
 
 
 
-Comparacion
+Comparación
+Para unicar una comparación simple, se tomó en cuenta la actividad que tiene cada motor en su repositorio de desarrollo, en este resultado se puede ver que Jade es el proyecto más activo, según datos del 2014.
 
+NAME	        STARS	  FORKS	  COMMITS	  CONTRIBUTORS	GITHUB SCORE
+Jade	        7,335	  1,136	  1,968	    135	            118
+Mustache.js	  6,985	  1,464	  514	      55	            95
+Dust.js	      1,571	  293	    697	      28	            28
+Nunjucks	    1,565	  115	    525	      40	            26
+EJS	          1,796	  289	    221	      24              25
 
 ## Referencias ##
 
