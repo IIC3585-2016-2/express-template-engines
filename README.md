@@ -114,7 +114,7 @@ block content
                 default
                     p you have #{friends} friends
 ```
-Las condiciones son atendidas segun el valor del when, tambien se puede o en verdad se debe utilizar el break para cuando no se desea renderizar nada ´para un dado valor
+Las condiciones son atendidas segun el valor del when, tambien se puede utilizar el break para cuando no se desea renderizar nada para un dado valor
 
 ### Code ###
 
@@ -145,7 +145,7 @@ p
 ## Conditionals ## 
 
 ### If ... Else ###
-Se puede utilizar el condicional **if ... else** para controlar la renderizacion 
+Se puede utilizar el condicional **if ... else** para controlar la renderización 
 
 ```javascript
 - var user = { name:'quelves', description: 'foo bar baz' }
@@ -166,7 +166,7 @@ Se puede utilizar el condicional **if ... else** para controlar la renderizacion
 
 ### unless ###
 
-Se puedo utilizar **unless** para negar una condicion
+Se puedo utilizar **unless** para negar una condición
 
 ```javascript
 unless user.isAnonymous
@@ -175,7 +175,7 @@ unless user.isAnonymous
 
 ## Filters ##
 
-Los filtros permiten usar otros idiomas dentro de una plantilla Pug, Todos los módulos JSTransformer se pueden usar como filtros de Pug. filtros populares incluyen :babel, :uglify-js, :scss, y :markdown-it
+Los filtros permiten usar otros idiomas dentro de una plantilla Pug, todos los módulos JSTransformer se pueden usar como filtros de Pug. filtros populares incluyen :babel, :uglify-js, :scss, y :markdown-it
 
 Para usar markdown
 ```shellscript
@@ -193,7 +193,7 @@ En la plantilla PUG usar
 ```
 
 ##  Interpolation ##
-Pug prove os operadores para una variedad de sus necesidades diferentes de interpolación
+Pug prove los operadores para una variedad de sus necesidades diferentes de interpolación
 
 ### String Interpolation, Escaped ###
 Tenga en cuenta la ubicación de los locales **title, author, and theGreat** de la plantilla, title, author, and theGreat en la siguiente plantilla
@@ -207,7 +207,7 @@ p Written with love by #{author}
 p This will be safe: #{theGreat}
 ```
 
-**title** sogie el padron basico para evaluar una plantilla local, pero el código entre **#{ and }** es evaluada, aplicado el escape y el resultado es bufferizado en la plantilla
+**title** sogie el padron básico para evaluar una plantilla local, pero el código entre **#{ and }** es evaluada, aplicado el escape y el resultado es bufferizado en la plantilla
 
 
 ### String Interpolation, Unescaped ###
@@ -257,7 +257,7 @@ Inicializar el proyecto
 npm init
 ```
 
-Adcionar dependencia de express
+Adicionar dependencia de express
 ```javascript
 npm install express --save
 ```
@@ -272,7 +272,7 @@ Adicionar dependencia para logger
 npm install morgan --save
 ```
 
-Definir el el template engine
+Definir el template engine
 ```javascript
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -293,7 +293,7 @@ html
     h1!= message
 ```
 
-Definicion de rutas en routs
+Definición de rutas en routs
 ```javascript
 var express = require('express');
 var router = express.Router();
