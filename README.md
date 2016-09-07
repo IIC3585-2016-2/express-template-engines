@@ -141,6 +141,40 @@ p
   != 'This code is <strong>not</strong> escaped!'
 ```
 
+## Conditionals ## 
+
+### If ... Else ###
+Se puede utilizar el condicional **if ... else** para controlar la renderizacion 
+
+```javascript
+- var user = { name:'quelves', description: 'foo bar baz' }
+- var authorised = false
+#user
+  if user.description
+    h2.green Description
+    p.description= user.description
+  else if authorised
+    h2.blue Description
+    p.description.
+      User has no description,
+      why not add one...
+  else
+    h2.red Description
+    p.description User has no description
+```
+
+### unless ###
+
+Se puedo utilizar **unless** para negar una condicion
+
+```javascript
+unless user.isAnonymous
+  p You're logged in as #{user.name}
+```
+
+
+
+
 ## Build Pug Project ##
 
 Crear proyecto

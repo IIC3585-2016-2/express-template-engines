@@ -62,6 +62,10 @@ router.get('/code', function (req, res) {
   res.render('code', { title: 'Pug Code', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
+router.get('/conditionals', function (req, res) {
+  res.render('conditionals', { title: 'Pug Conditionals', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
+
 //controle
 
 
