@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+    .container
+        .container
+            .jumbotron
+                h1=title
+                p=message + ' y ' + title
+        .container
+        .row
+            div.col-lg-6
+                 h2 Codigo de Ejemplo
+                 block codepreview
+            div.col-lg-4
+                h2 Codigo Ejecudado
+                block coderun
+

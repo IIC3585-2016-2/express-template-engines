@@ -77,6 +77,10 @@ router.get('/interpolation', function (req, res) {
 router.get('/mixins', function (req, res) {
   res.render('mixins', { title: 'Pug Mixins', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
+
+router.get('/preview', function (req, res) {
+  res.render('preview', { title: 'Pug Preview', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+});
 //controle
 
 
