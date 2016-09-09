@@ -48,6 +48,15 @@ app.use(function(err, req, res, next) {
   });
 });
 
+var pug = require('pug');
+
+pug.filters = {
+  'my-own-filter': function (text, options) {
+    if (options.addMD) text = '```js\n' + text + '\n```';
+    return text;
+  }
+};
+
 
 module.exports = app;
 
