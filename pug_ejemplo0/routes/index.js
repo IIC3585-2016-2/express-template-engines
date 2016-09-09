@@ -47,39 +47,39 @@ router.get('/layout2', function (req, res) {
 });
 
 router.get('/includes', function (req, res) {
-  res.render('includes', { title: 'Pug Includes', message: 'Pug Includes!'});
+  res.render('includes', { title: 'Includes', message: 'Pug Includes!'});
 });
 
 router.get('/attributes', function (req, res) {
-  res.render('attributes', { title: 'Pug Atributes', message: 'Pug Atributes!'});
+  res.render('attributes', { title: 'Atributes', message: 'Pug Atributes!'});
 });
 
 router.get('/case', function (req, res) {
-  res.render('case', { title: 'Pug Case', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('case', { title: 'Case', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/code', function (req, res) {
-  res.render('code', { title: 'Pug Code', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('code', { title: 'Code', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/conditionals', function (req, res) {
-  res.render('conditionals', { title: 'Pug Conditionals', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('conditionals', { title: 'Conditionals', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/filters', function (req, res) {
-  res.render('filters', { title: 'Pug Filters', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('filters', { title: 'Filters', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/interpolation', function (req, res) {
-  res.render('interpolation', { title: 'Pug Interpolation', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('interpolation', { title: 'Interpolation', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/mixins', function (req, res) {
-  res.render('mixins', { title: 'Pug Mixins', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('mixins', { title: 'Mixins', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 
 router.get('/preview', function (req, res) {
-  res.render('preview', { title: 'Pug Preview', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
+  res.render('preview', { title: 'Preview', message: 'Aplicacion de Ejemplo de NodeJS con Express '});
 });
 //controle
 

@@ -50,12 +50,24 @@ app.use(function(err, req, res, next) {
 
 var pug = require('pug');
 
-pug.filters = {
+
+var filters = {
   'my-own-filter': function (text, options) {
-    if (options.addMD) text = '```js\n' + text + '\n```';
+    if (options.addMD) text = '``js ' + text + '```';
+    return text.trim();
+  },
+  'my-own-filter2': function (text, options) {
     return text;
+  },
+  'my-own-filter3': function (text, options) {
+    return text.replace('```js','').replace('```','');
   }
 };
+
+pug.filters = filters;
+
+
+
 
 
 module.exports = app;

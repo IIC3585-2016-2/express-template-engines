@@ -11,5 +11,9 @@ html
     include navbar
 
     block content
+      .container
+        .jumbotron
+          h1=title
+          p=message + ' y ' + title
 
     include footer
