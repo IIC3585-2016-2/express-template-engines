@@ -412,15 +412,83 @@ var result = template(locals);
 
 Handlebars proporciona la potencia necesaria que le permitirán crear plantillas semánticas con eficacia sin la frustración
 
+Install Express
+```js
+npm install express --save
+```
+
+
+Install handlebars
+```js
+npm install express-handlebars --save
+```
+
+
+Crear la aplicacion y instanciar el Template Engine
+```js
+var express = require('express');
+var app = express();
+var exphbs  = require('express-handlebars');
+
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+app.get('/', function (req, res) {
+
+  var luckyNumber = Math.round(Math.random() *10);
+
+  res.render('home', {
+    luckyNumber: luckyNumber
+  });
+});
+
+app.get('/about', function (req, res) {
+  res.render('about');
+});
+
+
+app.use('/public', express.static(__dirname + '/public'));
+
+var port = Number(process.env.PORT || 5000);
+app.listen(port);
+```
+
+
+Definir el layout
 ```html
-<div class="entry">
-  <h1>{{title}}</h1>
-  <div class="body">
-    {{body}}
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+</head>
+<body>
+
+<div style="position: absolute; top: 0; height: 40px;width: 100%; background-color: #2a9fd6">
+    This is header
 </div>
 
+<div style="margin-top: 60px">
+    {{{body}}}
+</div>
+
+<div style="position: absolute; bottom: 0; height: 40px;width: 100%;background-color: #4cae4c ">
+    This is footer
+</div>
+
+</body>
+</html>
+
 ```
+
+Crear las view para completar la informacion del layout principal 
+```html
+<h1>Example App: Home</h1>
+
+Lucky Number is  {{ luckyNumber }}!
+```
+
 
 ## EJS ##
 Embedded JavaScript Templates (EJS) una solución ligera hacia la creación de HTML, 
@@ -464,7 +532,8 @@ EJS	            3,005	    419	     227	            23
 3. https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/?_ga=1.249538049.782897852.1473104247
 4. https://github.com/pugjs/pug
 5. https://pugjs.org/api/getting-started.html
-6. https://scotch.io/tutorials/use-ejs-to-template-your-node-application
+6. https://github.com/wycats/handlebars.js
+
 
 
 

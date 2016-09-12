@@ -22,12 +22,12 @@ router.get('/about', function(req, res, next) {
 });
 
 //
-router.get('/layout', function (req, res) {
-  res.render('layout', { title: 'Template Inheritance', message: 'Template Inheritance  layout!'});
+router.get('/layouts', function (req, res) {
+  res.render('layout', { title: 'Template Inheritance', message: 'Template Inheritance  layouts!'});
 });
 
 router.get('/sublayout', function (req, res) {
-  res.render('sub-layout', { title: 'Template Inheritance', message: 'Template Inheritance  Sub Layout!'});
+  res.render('sub-layouts', { title: 'Template Inheritance', message: 'Template Inheritance  Sub Layout!'});
 });
 
 router.get('/page', function (req, res) {
@@ -43,7 +43,7 @@ router.get('/pageb', function (req, res) {
 });
 
 router.get('/layout2', function (req, res) {
-  res.render('layout2', { title: 'Template Inheritance', message: 'Template Inheritance  layout 2!'});
+  res.render('layout2', { title: 'Template Inheritance', message: 'Template Inheritance  layouts 2!'});
 });
 
 router.get('/includes', function (req, res) {
