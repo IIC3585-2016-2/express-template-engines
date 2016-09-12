@@ -12,7 +12,7 @@ Pug es un motor de plantillas de alto rendimiento fuertemente influenciado por H
 
 Pug posee una serie de comandos para soportar la creacion de plantillas, con opciones para extender otras plantillas asi como incluir otras plantillas para componer un layout, asi como funciones para el control de flujo y estado.
 
-### Attributes ###
+## Attributes ##
 
 Los atributos son los mismos de html pero con la sintaxis de JS
 
@@ -73,7 +73,7 @@ block content
         include pet.pug
 ```
 
-### Case ###
+## Case ##
 La declaración de _Case_ es similar al  switch de JavaScript.
 ```javascript
 extends layout.pug
@@ -116,11 +116,11 @@ block content
 ```
 Las condiciones son atendidas segun el valor del when, tambien se puede utilizar el break para cuando no se desea renderizar nada para un dado valor
 
-### Code ###
+## Code ##
 
 Pug hace que sea posible escribir código JavaScript en línea en sus plantillas. Hay tres tipos de código
 
-#### Unbuffered Code ####
+### Unbuffered Code ###
 Empeza con **-** y no anade ninguna salida
 ```javascript
 - list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
@@ -128,21 +128,21 @@ each item in list
   li= item
 ```
 
-#### Buffered Code ####
+### Buffered Code ###
 Empeza con **=** como salida va el resultado de la evaluación de la expresión de JavaScript en la plantilla. Para mayor seguridad, es la primera de escape HTML
 ```javascript
 p= 'This code is' + ' <escaped>!'
 ```
 
 
-#### Unescaped Buffered Code ####
+### Unescaped Buffered Code ###
 comienza con! = y envía el resultado de la evaluación de la expresión de JavaScript en la plantilla. Esto no hace ningún escape, por lo que no es seguro para la entrada del usuario
 ```javascript
 p
   != 'This code is <strong>not</strong> escaped!'
 ```
 
-## Conditionals ## 
+## Conditionals ##
 Pug incorpora sintaxis condicional de primera clase que permite omitir la carga del contenido.
 
 ### If ... Else ###
@@ -410,7 +410,7 @@ var result = template(locals);
 
 ## Handlebars ##
 
-Handlebars proporciona la potencia necesaria que le permitirán crear plantillas semánticas con eficacia sin la frustración
+Handlebars proporciona la potencia necesaria que le permitirán crear plantillas semánticas con eficacia sin la frustración, es una extension de mustache.
 
 Install Express
 ```js
